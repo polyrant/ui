@@ -1,0 +1,61 @@
+{
+	"name": "@polyrant/ui",
+	"version": "0.0.0",
+	"description": "Polyrant's Design System",
+	"main": "build/index.js",
+	"repository": "https://github.com/polyrant/ui",
+	"author": "Brice Duke",
+	"license": "MIT",
+	"private": true,
+	"module": "build/index.es.js",
+	"files": [
+		"build"
+	],
+	"scripts": {
+		"build": "rollup -c",
+		"storybook": "start-storybook -p 6006",
+		"storybook:export": "build-storybook",
+		"test": "jest",
+		"test:watch": "jest --watch",
+		"c": "git add . && cz",
+		"p": "yarn c && git push origin"
+	},
+	"peerDependencies": {
+		"@types/react": "^17.0.30",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.15.8",
+		"@rollup/plugin-commonjs": "^21.0.0",
+		"@rollup/plugin-node-resolve": "^13.0.5",
+		"@storybook/react": "^6.3.12",
+		"@testing-library/jest-dom": "^5.14.1",
+		"@testing-library/react": "^12.1.2",
+		"@types/jest": "^27.0.2",
+		"@types/react": "^17.0.30",
+		"autoprefixer": "^10.3.7",
+		"babel-loader": "^8.2.2",
+		"babel-preset-react-app": "^10.0.0",
+		"cz-conventional-changelog": "3.3.0",
+		"identity-obj-proxy": "^3.0.0",
+		"jest": "^27.3.0",
+		"postcss": "^8.3.9",
+		"prop-types": "^15.7.2",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"rollup": "^2.58.0",
+		"rollup-plugin-peer-deps-external": "^2.2.4",
+		"rollup-plugin-postcss": "^4.0.1",
+		"rollup-plugin-typescript2": "^0.30.0",
+		"sass-loader": "^12.2.0",
+		"tailwindcss": "^2.2.17",
+		"ts-jest": "^27.0.7",
+		"typescript": "^4.4.4"
+	},
+	"config": {
+		"commitizen": {
+			"path": "./node_modules/cz-conventional-changelog"
+		}
+	}
+}
