@@ -1,6 +1,6 @@
 {
 	"name": "@polyrant/ui",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"description": "Polyrant's Design System",
 	"main": "build/index.js",
 	"repository": "https://github.com/polyrant/ui",
@@ -12,6 +12,7 @@
 	],
 	"scripts": {
 		"build": "rollup -c",
+		"prepublishOnly": "yarn build",
 		"storybook": "start-storybook -p 6006",
 		"storybook:export": "build-storybook",
 		"test": "jest",
