@@ -6,7 +6,6 @@
 	"repository": "https://github.com/polyrant/ui",
 	"author": "Brice Duke",
 	"license": "MIT",
-	"private": true,
 	"module": "build/index.es.js",
 	"files": [
 		"build"
