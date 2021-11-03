@@ -49,3 +49,15 @@ export const Disabled = () => (
 		</Button>
 	</div>
 );
+
+export const Square = () => (
+	<div className="space-x-3">
+		<Button style="square" size="lg">
+			UI
+		</Button>
+		<Button style="square">UI</Button>
+		<Button style="square" size="sm">
+			UI
+		</Button>
+	</div>
+);

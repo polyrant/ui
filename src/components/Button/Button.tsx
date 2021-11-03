@@ -20,14 +20,19 @@ export default function Button({
 	onClick,
 	disabled = false,
 }: Props): ReactElement {
+	const spacing = size === 'lg' ? '16' : size === 'md' ? '14' : '12';
 	const fontSize =
 		size === 'lg' ? '2xl' : size === 'md' ? 'lg' : size === 'sm' ? 'md' : '';
+
+	const squareStyle = `w-${spacing}`;
 
 	const tailwindClass = `border-none rounded-2xl cursor-${
 		disabled ? 'not-allowed' : 'pointer'
 	}  font-bold text-${
 		state === 'secondary' || state === 'accent' ? 'background' : 'text'
-	} bg-${disabled ? 'gray-300' : state} text-${fontSize} p-3`;
+	} bg-${disabled ? 'gray-300' : state} text-${fontSize} p-3 h-${spacing} ${
+		style === 'square' && squareStyle
+	}`;
 
 	return disabled ? (
 		<button data-testid="button" disabled={disabled} className={tailwindClass}>
